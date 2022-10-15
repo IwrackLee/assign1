@@ -1,0 +1,62 @@
+Assignment N1
+
+#1 დისკრიმინანტი
+import java.util.Scanner;
+public class New {
+    static void numbers(int x, int y, int z){
+        int Dis = y*y - (4*x)*z;
+        System.out.println("დისკრიმინანტი: " + Dis);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        System.out.println("Type in A:");
+        int a = scanner.nextInt();
+        System.out.println("Type in B:");
+        int b = scanner.nextInt();
+        System.out.println("Type in C:");
+        int c = scanner.nextInt();
+
+        numbers(a, b, c);
+
+    }
+}
+
+
+#2 სტრინგში ყველაზე პატარა სიტყვა
+
+import java.util.Scanner;
+public class New {
+
+    public static void main(String [] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        String [] Sityvebi = new String[5];
+
+
+        for(int i = 0; i < Sityvebi.length; i++){
+
+            System.out.println("შეიყვანეთ სიტყვა: ");
+            String k = scanner.nextLine();
+            Sityvebi[i] = k;
+
+        }
+
+        smallest(Sityvebi);
+        System.out.println("ყველაზე პატარა სიტყვაა: " + smallest(Sityvebi));
+
+    }
+
+   public static String smallest(String inputi[]) {
+        String pirveliSityva = inputi[0];
+        for (int i = 0 ; i < inputi.length ; i++) {
+            if ((inputi[i].compareTo(pirveliSityva))< 1) {
+                pirveliSityva = inputi[i];
+            }
+       }
+       return pirveliSityva;
+    }
+}
